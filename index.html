@@ -20,12 +20,17 @@
 .btn.buy:hover{ transform: translateY(-2px) scale(1.07); }
 
 /* Optional: product cards lift on hover */
-.product{
-  transition: transform .2s ease, box-shadow .25s ease;
+.product {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.2s ease;
 }
-.product:hover{
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+
+.product:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px #8a2be2; /* purple glow */
 }
 
 /* Accessibility: respect reduced motion */
