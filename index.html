@@ -6,6 +6,34 @@
   <title>BCR Market</title>
   <meta name="description" content="BCR Market — digital products and Telegram group access" />
   <style>
+    /* --- Hover grow for buttons & product cards --- */
+.btn{
+  transition: transform .18s ease, box-shadow .22s ease, background-color .2s ease, color .2s ease;
+  will-change: transform;
+}
+.btn:hover{
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+/* Optional: make red buy/contact pop a bit more */
+.btn.buy:hover{ transform: translateY(-2px) scale(1.07); }
+
+/* Optional: product cards lift on hover */
+.product{
+  transition: transform .2s ease, box-shadow .25s ease;
+}
+.product:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .btn, .product { transition: none !important; }
+  .btn:hover, .product:hover { transform: none !important; box-shadow: none !important; }
+}
+
     :root{
       --bg:#0b0b0b;
       --panel:#0f0f10;
