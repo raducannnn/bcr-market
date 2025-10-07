@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BCR Market</title>
+  <meta name="description" content="BCR Market — digital products and Telegram group access" />
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#0f0f10;
+      --accent:#c8102e; /* red */
+      --muted:#9a9a9a;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#070707);color:#fff;min-height:100vh}
+    a{color:inherit;text-decoration:none}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(0,0,0,0.6), transparent);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .nav{display:flex;align-items:center;gap:20px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6b0007);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;box-shadow:0 6px 20px rgba(200,20,40,0.15)}
+    .brand h1{font-size:18px;margin:0}
+    nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    nav button{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer}
+    nav a.cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:10px;font-weight:600}
+
+    /* Mobile menu */
+    .menu-toggle{display:none}
+
+    /* Hero */
+    .hero{padding:48px 0;display:grid;grid-template-columns:1fr;gap:24px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:16px;padding:22px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:18px;align-items:center}
+    .hero-card h2{margin:0;font-size:20px}
+    .hero-card p{margin:6px 0 0;color:var(--muted)}
+
+    /* Sections */
+    section{padding:18px 0}
+    .products-grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .product{background:var(--panel);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+    .product .meta{display:flex;flex-direction:column}
+    .product h3{margin:0;font-size:16px}
+    .product p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .price{font-weight:700;font-size:16px}
+    .actions{display:flex;gap:8px}
+    .btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.buy{background:var(--accent);color:#fff}
+    .btn.disabled{background:rgba(255,255,255,0.03);color:var(--muted);cursor:not-allowed}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media(min-width:700px){
+      .hero{grid-template-columns:1fr 380px}
+      .products-grid{grid-template-columns:repeat(2,1fr)}
+      nav ul{gap:16px}
+      .menu-toggle{display:none}
+    }
+    @media(max-width:699px){
+      .menu-toggle{display:block;background:transparent;border:0;color:var(--muted);font-weight:700}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">BCR</div>
+        <div>
+          <h1>BCR Market</h1>
+          <div style="color:var(--muted);font-size:12px">Digital access & Telegram groups</div>
+        </div>
+      </div>
+      <div>
+        <button class="menu-toggle" aria-expanded="false">☰</button>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="cta" href="#products">Buy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <div class="hero-card">
+          <div style="flex:1">
+            <h2>Welcome to BCR Market</h2>
+            <p>Your digital hub for exclusive Telegram access and small digital goods. Fast checkout via PayPal.</p>
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <a href="#products" class="btn buy">View Products</a>
+              <a href="#contact" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted)">Contact</a>
+            </div>
+          </div>
+          <div style="width:120px;text-align:center">
+            <div style="font-weight:800;font-size:24px;">BCR</div>
+            <div style="color:var(--muted);font-size:12px;margin-top:6px">Market</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div style="background:var(--panel);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+          <h3 style="margin-top:0">Quick Info</h3>
+          <p style="margin:6px 0;color:var(--muted);font-size:13px">Secure payments via PayPal. Prices in USD. First product is a $5 Telegram group access.</p>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            PayPal account: <strong>BogRad1</strong>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="products">
+      <h2 style="margin-bottom:10px">Products</h2>
+      <div class="products-grid">
+
+        <!-- Product 1: Telegram group page -->
+        <div class="product" data-id="prod-1" data-name="Telegram Group Page" data-price="5">
+          <div class="meta">
+            <h3>Telegram Group Page</h3>
+            <p>Access to an exclusive Telegram group. Immediate link after payment.</p>
+          </div>
+          <div style="text-align:right">
+            <div class="price">$5</div>
+            <div class="actions" style="margin-top:8px">
+              <!-- PayPal.me direct link. Format: https://www.paypal.me/USERNAME/AMOUNT -->
+              <a class="btn buy" href="https://www.paypal.me/BogRad1/5" target="_blank" rel="noopener noreferrer">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: empty slot for future product -->
+        <div class="product" data-id="prod-2" data-name="Product Slot 2" data-price="0">
+          <div class="meta">
+            <h3>Product Slot 2</h3>
+            <p>Add your second product here later. Edit the code to set name, price and PayPal link.</p>
+          </div>
+          <div style="text-align:right">
+            <div class="price">—</div>
+            <div class="actions" style="margin-top:8px">
+              <button class="btn disabled" disabled>Coming Soon</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: empty slot for future product -->
+        <div class="product" data-id="prod-3" data-name="Product Slot 3" data-price="0">
+          <div class="meta">
+            <h3>Product Slot 3</h3>
+            <p>Another product slot ready for a future item. Replace this text and link in the HTML.</p>
+          </div>
+          <div style="text-align:right">
+            <div class="price">—</div>
+            <div class="actions" style="margin-top:8px">
+              <button class="btn disabled" disabled>Coming Soon</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div style="background:var(--panel);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+        <p style="margin:0 0 8px;color:var(--muted)">Questions or custom orders? Reach out on Telegram or via email.</p>
+        <p style="margin:0"><strong>Telegram:</strong> <a href="https://t.me/BogRad1" target="_blank" rel="noopener noreferrer">@BogRad1</a></p>
+        <p style="margin:6px 0 0"><strong>PayPal:</strong> BogRad1 (used for Buy Now links)</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="margin-bottom:10px">© <strong>BCR Market</strong> — Built for mobile & desktop</div>
+      <div style="font-size:13px;color:var(--muted)">This site uses PayPal.me for quick payments. Make sure your PayPal.me link is active.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+    if(toggle){
+      toggle.addEventListener('click', ()=>{
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        navUl.style.display = expanded ? 'none' : 'flex';
+        navUl.style.flexDirection = 'column';
+        navUl.style.position = 'absolute';
+        navUl.style.right = '20px';
+        navUl.style.top = '64px';
+        navUl.style.background = 'rgba(0,0,0,0.6)';
+        navUl.style.padding = '12px';
+        navUl.style.borderRadius = '10px';
+      })
+    }
+
+    // Accessibility: close mobile menu when link clicked
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', ()=>{
+      if(window.innerWidth < 700){
+        navUl.style.display = 'none';
+        toggle.setAttribute('aria-expanded','false');
+      }
+    }))
+
+    // NOTE for owner: how to edit product slots quickly in HTML
+    // Product blocks have data attributes: data-name and data-price. Replace the Buy link with your PayPal.me link
+  </script>
+</body>
+</html>
